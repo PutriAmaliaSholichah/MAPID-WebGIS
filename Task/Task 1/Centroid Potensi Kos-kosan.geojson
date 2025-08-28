@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "Centroid Potensi Kos-kosan",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32749" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Lokasi": "Lokasi 1" }, "geometry": { "type": "Point", "coordinates": [ 700500.627838350948878, 9158447.358322745189071 ] } },
+{ "type": "Feature", "properties": { "id": 2, "Lokasi": "Lokasi 2" }, "geometry": { "type": "Point", "coordinates": [ 701426.27404698333703, 9157594.951744293794036 ] } }
+]
+}

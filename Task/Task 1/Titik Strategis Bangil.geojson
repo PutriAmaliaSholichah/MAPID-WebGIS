@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "Titik Strategis Bangil",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32749" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Lokasi": "Stasiun Bangil" }, "geometry": { "type": "Point", "coordinates": [ 696253.386681352276355, 9159759.060805516317487 ] } },
+{ "type": "Feature", "properties": { "id": 2, "Lokasi": "Alun-Alun Bangil" }, "geometry": { "type": "Point", "coordinates": [ 696876.671769064152613, 9159750.189126498997211 ] } }
+]
+}
