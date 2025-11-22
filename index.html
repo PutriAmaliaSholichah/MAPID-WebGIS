@@ -150,7 +150,7 @@
       const [resProyek, resDelineasi, resRdtr] = await Promise.all([
         fetch("https://geoserver.mapid.io/layers_new/get_layer?api_key=3ef88a873ba244f3926fff82ef5bf75d&layer_id=692067ff4fa6153525c81bb2&project_id=67cba976c9a4a7d62f7ad3dc&limit=10000"),
         fetch("https://geoserver.mapid.io/layers_new/get_layer?api_key=3ef88a873ba244f3926fff82ef5bf75d&layer_id=692067dfa9a05be32434b44c&project_id=67cba976c9a4a7d62f7ad3dc&limit=10000"),
-        fetch("data/RDTR_KIPP_IKN_FIX_PerbaikanGeom.geojson")
+        fetch("RDTR_KIPP_IKN_FIX_PerbaikanGeom.geojson")
       ]);
 
       // ✅ Tambahkan pengecekan status response!
@@ -429,5 +429,6 @@
 
 
 </script>
+
 
 
