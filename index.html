@@ -154,18 +154,18 @@
       ]);
 
       // ✅ Tambahkan pengecekan status response!
-      if (!resProyek.ok || !resDelineasi.ok || !resRdtr.ok) {
-        throw new Error(`API error: ${resProyek.status}/${resDelineasi.status}/${resRdtr.status}`);
+      try {
+        data_proyek = await resProyek.json();
+        data_delineasi = await resDelineasi.json();
+        data_rdtr = await resRdtr.json();
+      } catch (parseError) {
+        throw new Error ('Gagal memproses');
       }
-
-      data_proyek = await resProyek.json();
-      data_delineasi = await resDelineasi.json();
-      data_rdtr = await resRdtr.json();
-
+      
       // Validasi struktur GeoJSON
-      if (!data_proyek?.features) throw new Error("Proyek: Invalid GeoJSON (no features)");
-      if (!data_delineasi?.features) throw new Error("Delineasi: Invalid GeoJSON");
-      if (!data_rdtr?.features) throw new Error("RDTR: Invalid GeoJSON");
+      if (!data_proyek?.features) throw new Error("Data Proyek: Invalid GeoJSON (no features)");
+      if (!data_delineasi?.features) throw new Error("Data Delineasi WP: Invalid GeoJSON");
+      if (!data_rdtr?.features) throw new Error("Data RDTR: Invalid GeoJSON");
 
       data_proyek.features.forEach((f) => removeZCoordinates(f.geometry));
       data_delineasi.features.forEach((f) => removeZCoordinates(f.geometry));
@@ -429,6 +429,7 @@
 
 
 </script>
+
 
 
 
